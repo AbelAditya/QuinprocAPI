@@ -29,7 +29,7 @@ def Login(uname: str="", PID: int=0):
 
 @app.post("/SignUp")
 def signup(user: User):
-    UserData.insert_one({"Name":user.Name,"PID":user.PID})
+    UserData.insert_one({"Name":user.Name,"PatientID":user.PID})
 
     return {"SignUp":True}
 
