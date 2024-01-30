@@ -34,6 +34,6 @@ def signup(user: User):
     return {"SignUp":True}
 
 @app.get("/getBPM")
-def getBPM(id: int=4817):
+def getBPM(id: str):
     x = collection.find_one({"ID":id})
     return {"ID":x['ID'],"BPM":x["BPM"]}
